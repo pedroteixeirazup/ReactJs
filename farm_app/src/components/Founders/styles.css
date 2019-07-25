@@ -1,0 +1,23 @@
+.founder-layout {
+    background: #fff;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px; 
+    /* margin-left: 50px; */
+    width: 450px;
+    height: 100%;
+    display: inline-block;
+}
+
+.founder-layout article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px; 
+}
+
+.founders-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
