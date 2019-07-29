@@ -8,22 +8,22 @@ import EffectExample from './EffectExample';
 function App() {
   const [visible, setVisible] = useState(true);
 
-  // return (
-  //   <>
-  //   <Provider store={store}>
-  //     <div className="App">
-  //         <CourserList/>
-  //     </div>
-  //   </Provider>
+  return (
+    <>
+    <Provider store={store}>
+      <div className="App">
+          <CourserList/>
+      </div>
+    </Provider>
 
-  //   <EffectExample/>
-  //   </>
-  // );
-  setTimeout(() => {
-    setVisible(false);
-  }, 5000);
+    <EffectExample/>
+    </>
+  );
+  // setTimeout(() => {
+  //   setVisible(false);
+  // }, 5000);
   
-    return visible && <EffectExample/>;
+  //   return visible && <EffectExample/>;
 }
 
 export default App;
