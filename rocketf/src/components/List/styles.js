@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { useDrag } from 'react-dnd';
 
 export const Container = styled.div`
   padding: 0 15px;
