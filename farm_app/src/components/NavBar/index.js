@@ -31,7 +31,7 @@ export default class NavBarFarm extends Component {
                             <NavLink id="navitem" href="/components/">Founders</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink id="navitem" href="">GitHub</NavLink>
+                            <NavLink id="navitem" href="https://github.com/pedroteixeirazup/ReactJs/tree/master/farm_app">GitHub</NavLink>
                         </NavItem>
                     </Nav>
                     </Collapse>
