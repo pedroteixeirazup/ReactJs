@@ -8,14 +8,27 @@ const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
 
+const connectedUsers = {};
+
 //12:43
 io.on('connection', socket => {
-   
+    const { user } = socket.handshake.query;
+    connectedUsers[user] = socket.id
+
+ 
+     console.log(user, socket.id);
 });
 
 
 mongoose.connect('mongodb+srv://omnistack:omnistack@omnistack-vlfdq.mongodb.net/omnistack?retryWrites=true&w=majority',{ 
     useNewUrlParser: true 
+});
+
+app.use((req, res, next) => {
+    req.io = io;
+    req.connectedUsers = connectedUsers;
+
+    return next();
 });
 
 app.use(cors());
